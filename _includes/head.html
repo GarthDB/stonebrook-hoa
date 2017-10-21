@@ -9,5 +9,6 @@
   <meta name="author" content="SitePoint">
 
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
-  <link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/css/main.css">
+  {% assign min = 0 %}{% assign max = 256 %}{% assign diff = max | minus: min %}{% assign randomNumber = "now" | date: "%N" | modulo: diff | plus: min %}
+  <link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/css/main.css?v={{ randomNumber }}">
 </head>
