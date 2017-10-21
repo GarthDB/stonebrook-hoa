@@ -1,0 +1,13 @@
+.news-article {
+  margin: 10px 0 30px;
+  padding-bottom: 20px;
+  clear: both;
+  max-width: 600px;
+  aside {
+    float: left;
+    margin-right: 10px;
+  }
+  &:not(:last-child){
+    border-bottom: 1px solid rgba(0,0,0,0.4);
+  }
+}
