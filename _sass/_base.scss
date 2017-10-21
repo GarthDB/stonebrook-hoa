@@ -63,3 +63,11 @@ a {
   width: 80%;
   box-sizing: border-box;
 }
+
+.screen-reader-text {
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  text-indent: -100vw;
+}
