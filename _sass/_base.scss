@@ -1,25 +1,26 @@
 // Base Styles
 html {
   height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 // Defaults for the body
 body {
   box-sizing: border-box;
   color: #333;
-  font: normal normal normal 1rem/1.5 'source_sans_pro', sans;
+  font: normal normal normal 1rem/1.5 'Source Sans Pro', sans-serif;
   font-weight: 400;
   margin: 0;
-  margin-bottom: -100px;
   min-height: 100%;
-  padding-bottom: 100px;
+  padding-bottom: 175px;
   position: relative;
 }
 
 a {
   color: rgb(49, 107, 158);
 
-  a:focus,
+  &:focus,
   &:hover {
     text-decoration: underline;
   }
@@ -45,5 +46,20 @@ a {
 }
 
 .site {
-  padding: 2rem 0;
+  max-width: 1080px;
+  position: relative;
+  height: auto;
+  margin: 0 auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.clear {
+  clear: both;
+}
+
+.site-content {
+  float: left;
+  width: 80%;
+  box-sizing: border-box;
 }

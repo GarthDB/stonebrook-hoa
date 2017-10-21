@@ -1,10 +1,3 @@
-<header class="site-header">
-  <div class="logo">Stonebrook Homeowners Association</div>
-  <nav class="site-nav">
-    <ul>
-    {% for page in site.pages %}
-      <li class="site-nav__item"><a class="site-nav__link" href="{{page.url}}">{{page.title}}</a></li>
-    {% endfor %}
-    </ul>
-  </nav>
+<header class="site-header site">
+  <h1 class="site-header__title"><a href="{{ site.url }}{{ site.baseurl }}/">Stonebrook Homeowners Association</a></h1>
 </header>
