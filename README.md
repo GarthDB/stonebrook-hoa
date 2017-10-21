@@ -1,3 +1,3 @@
-# Stonebrook HSA
+# Stonebrook HOA
 
-New website for the Stonebrook Homeowners Association.
+New website for the Stonebrook Home Owners Association.
