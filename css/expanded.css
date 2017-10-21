@@ -119,8 +119,9 @@ a:focus, a:hover {
 
 .input-set__label {
   display: inline-block;
-  width: 80px;
+  min-width: calc(80px - 1rem);
   vertical-align: top;
+  margin-right: 1rem;
 }
 
 .input-set {
