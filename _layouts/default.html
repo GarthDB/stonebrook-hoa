@@ -2,6 +2,13 @@
 
 <body>
   {% include header.html %}
-  {{content}}
+  <div class="site">
+    {% include nav.html %}
+    <div class="site-content">
+      {{content}}
+    </div>
+    <div class="clear"></div>
+  </div>
+  {% include footer.html %}
 </body>
 </html>

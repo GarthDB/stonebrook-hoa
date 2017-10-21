@@ -1,0 +1,19 @@
+.site-footer {
+  padding: 20px 0;
+  color: white;
+  background: linear-gradient(to bottom, #2b2b2b ,#4c4c4c 100%);
+  text-align: center;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.footer-address {
+  display: inline-block;
+  text-align: left;
+  margin-right: 20px;
+}
+.footer-phone {
+  display: inline-block;
+  vertical-align: top;
+}

@@ -1,0 +1,32 @@
+.input-set__label {
+  display: inline-block;
+  width: 80px;
+  vertical-align: top;
+}
+.input-set {
+  margin: 5px 0;
+}
+.input-set__label--checkbox {
+  margin-left: 5px;
+  cursor: pointer;
+}
+.input-set__input--checkbox {
+  cursor: pointer;
+}
+.contact-form__legend {
+  float: left;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  left: -20px;
+  top: 5px;
+}
+.contact-form__checkboxes {
+  float: left;
+  vertical-align: top;
+}
+.contact-form__fieldset {
+  border: none;
+  margin: 5px 0;
+  padding: 0 20px;
+}
