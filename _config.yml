@@ -30,5 +30,7 @@ exclude:
   - .gitignore
   - Rakefile
   - README.md
+include:
+  - css/expanded.css
 sass:
   style: expanded
