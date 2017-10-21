@@ -17,6 +17,7 @@ body {
 
 a {
   color: #316b9e;
+  text-decoration: none;
 }
 a:focus, a:hover {
   text-decoration: underline;
@@ -55,6 +56,26 @@ a:focus, a:hover {
   float: left;
   width: 80%;
   box-sizing: border-box;
+}
+
+.screen-reader-text {
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  text-indent: -100vw;
+}
+
+.division-table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.division-table td, .division-table th {
+  border: 1px solid;
+  padding: 3px 5px;
+}
+.division-table td:nth-last-child(-n+2) {
+  text-align: right;
 }
 
 .site-header {
@@ -98,7 +119,7 @@ a:focus, a:hover {
 .site-footer {
   padding: 20px 0;
   color: white;
-  background: linear-gradient(to bottom, #2b2b2b, #4c4c4c 100%);
+  background: linear-gradient(to bottom, #2b2b2b, #4c4c4c 100%) #4c4c4c;
   text-align: center;
   box-sizing: border-box;
   position: absolute;
@@ -155,4 +176,18 @@ a:focus, a:hover {
   border: none;
   margin: 5px 0;
   padding: 0 20px;
+}
+
+.news-article {
+  margin: 10px 0 30px;
+  padding-bottom: 20px;
+  clear: both;
+  max-width: 600px;
+}
+.news-article aside {
+  float: left;
+  margin-right: 10px;
+}
+.news-article:not(:last-child) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
 }

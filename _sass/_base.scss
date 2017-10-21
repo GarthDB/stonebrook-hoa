@@ -19,6 +19,7 @@ body {
 
 a {
   color: rgb(49, 107, 158);
+  text-decoration: none;
 
   &:focus,
   &:hover {
@@ -70,4 +71,16 @@ a {
   height: 1px;
   position: absolute;
   text-indent: -100vw;
+}
+
+.division-table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  td, & th {
+    border: 1px solid;
+    padding: 3px 5px;
+  }
+  td:nth-last-child(-n+2) {
+    text-align: right;
+  }
 }
