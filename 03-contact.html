@@ -2,21 +2,32 @@
 layout: page
 title: Contact Us
 permalink: /contact/
+scripts:
+  - ../js/main.js
 ---
-<p>If you have any questions or would like to report a violation of the covenants in the neighborhood please use this form to send us a message.<p>
-<form class="contact-form" action="#">
-  <div class="input-set"><label for="input-name" class="input-set__label">Name</label><input id="input-name" type="text" name="name" class="input-set__input"></div>
-  <div class="input-set"><label for="input-email" class="input-set__label">Email</label><input id="input-email" type="email" name="email" class="input-set__input"></div>
-  <fieldset class="contact-form__fieldset">
-    <legend class="contact-form__legend">Reason for contact</legend>
-    <div class="contact-form__checkboxes">
-      <div class="input-set"><input id="reason-violation" type="checkbox" name="reason-violation" class="input-set__input--checkbox"><label for="reason-violation" class="input-set__label--checkbox">Report violation</label></div>
-      <div class="input-set"><input id="reason-question-covenants" type="checkbox" name="reason-question-covenants" class="input-set__input--checkbox"><label for="reason-question-covenants" class="input-set__label--checkbox">Question about covenants</label></div>
-      <div class="input-set"><input id="reason-question-board" type="checkbox" name="reason-question-board" class="input-set__input--checkbox"><label for="reason-question-board" class="input-set__label--checkbox">Other question for the board</label></div>
+<p>If you have any questions or would like to report a violation of the covenants in the neighborhood please use this form to send us a message.</p>
+<form action="#" id="contact-form" class="contact-form">
+  <fieldset id="inputs" class="contact-form__inputs">
+    <div class="input-set"><label for="input-name" class="input-set__label">Name</label><input id="input-name" type="text" name="name" class="input-set__input"></div>
+    <div class="input-set"><label for="input-email" class="input-set__label">Email</label><input id="input-email" type="email" name="email" class="input-set__input"></div>
+    <fieldset class="contact-form__fieldset">
+      <legend class="contact-form__legend">Reason for contact</legend>
+      <div class="contact-form__checkboxes">
+        <div class="input-set"><input id="reason-violation" type="checkbox" name="reason-violation" class="input-set__input--checkbox"><label for="reason-violation" class="input-set__label--checkbox">Report violation</label></div>
+        <div class="input-set"><input id="reason-question-covenants" type="checkbox" name="reason-question-covenants" class="input-set__input--checkbox"><label for="reason-question-covenants" class="input-set__label--checkbox">Question about covenants</label></div>
+        <div class="input-set"><input id="reason-question-board" type="checkbox" name="reason-question-board" class="input-set__input--checkbox"><label for="reason-question-board" class="input-set__label--checkbox">Other question for the board</label></div>
+      </div>
+      <div class="clear"></div>
+    </fieldset>
+    <div class="input-set"><label for="input-date" class="input-set__label">Date of violation observation (if applicable)</label><input id="input-date" type="date" name="date" class="input-set__input"></div>
+    <div class="input-set"><label for="input-content" class="input-set__label">Message</label><textarea id="input-content" name="content" rows="8" cols="80"></textarea></div> <input type="submit" value="Send Message">
+    <div class="contact-form__overlay">
+      <svg class="indefinite-spinner" height="64" width="64">
+        <circle id="bgcircle" cx="32" cy="32" r="30"/>
+        <circle id="spinner" r="5"/>
+      </svg>
+      <p>Sending message... one sec.</p>
+      <a id="contact-form__cancel" class="contact-form__cancel" href="#">Cancel</a>
     </div>
-    <div class="clear"></div>
   </fieldset>
-  <div class="input-set"><label for="input-date" class="input-set__label">Date of violation observation (if applicable)</label><input id="input-date" type="date" name="date" class="input-set__input"></div>
-  <div class="input-set"><label for="input-content" class="input-set__label">Message</label><textarea id="input-content" name="content" rows="8" cols="80"></textarea></div>
-  <input type="submit" value="Send Message">
 </form>

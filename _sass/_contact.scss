@@ -4,16 +4,26 @@
   vertical-align: top;
   margin-right: 1rem;
 }
+
 .input-set {
   margin: 5px 0;
 }
+
 .input-set__label--checkbox {
   margin-left: 5px;
   cursor: pointer;
 }
+
 .input-set__input--checkbox {
   cursor: pointer;
 }
+
+.contact-form {
+  position: relative;
+  padding: 20px;
+  perspective: 3000px;
+}
+
 .contact-form__legend {
   float: left;
   margin: 0;
@@ -22,12 +32,80 @@
   left: -20px;
   top: 5px;
 }
+
 .contact-form__checkboxes {
   float: left;
   vertical-align: top;
 }
+
 .contact-form__fieldset {
   border: none;
   margin: 5px 0;
   padding: 0 20px;
+}
+
+.contact-form__overlay {
+  background: rgba(236, 236, 236, 0.9);
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  transform-origin: bottom;
+  transform: rotateX(-90deg) translate(0, 500px);
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+.contact-form__inputs:disabled {
+  .contact-form__overlay {
+    transform: rotateX(0deg) translate(0,0);
+    opacity: 1;
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+    cx: 12px;
+    cy: 32px;
+  }
+
+  25% {
+    transform: rotate(360deg);
+    cx: 26px;
+    cy: 32px;
+  }
+
+  50% {
+    transform: rotate(720deg);
+    cx: 26px;
+    cy: 32px;
+  }
+
+  75% {
+    transform: rotate(1080deg);
+    cx: 12px;
+    cy: 32px;
+  }
+
+  100% {
+    transform: rotate(1440deg);
+    cx: 12px;
+    cy: 32px;
+  }
+}
+
+#bgcircle {
+  fill: rgba(0,0,0,0.2);
+}
+
+#spinner {
+  fill: #1473e6;
+  transform-origin: 32px 32px;
+  animation: rotate 3.5s linear infinite;
 }
