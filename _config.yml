@@ -22,6 +22,9 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "stonebrook-hoa" # the subpath of your site, e.g. /blog
 url: "http://garthdb.com/" # the base hostname & protocol for your site, e.g. http://example.com
 
+plugins:
+ - jekyll-coffeescript
+
 # Build settings
 markdown: kramdown
 exclude:
