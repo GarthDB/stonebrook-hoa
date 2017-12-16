@@ -15,11 +15,6 @@ body {
   min-height: 100%;
   padding-bottom: 175px;
   position: relative;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-areas: ". header header header ."
-                       ". nav nav nav ."
-                       "sidebar . siteContent siteContent siteContent"
-                       ". footer footer footer .";
 }
 
 a {
@@ -51,9 +46,22 @@ a {
   width: 6rem;
 }
 
+.grid-wrapper {
+  display: grid;
+  max-width: 1080px;
+  position: relative;
+  margin: 0 auto;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-areas: "header header header header header"
+                       ". nav nav nav ."
+                       "sidebar siteContent siteContent siteContent siteContent"
+                       "footer footer footer footer footer";
+}
+
 .site-content {
   grid-area: siteContent;
   box-sizing: border-box;
+  padding-left: 40px;
 }
 
 .screen-reader-text {
