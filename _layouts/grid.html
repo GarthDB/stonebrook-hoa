@@ -20,13 +20,15 @@
 
 
 <body>
-  {% include header.html %}
-  {% include nav.html %}
-  {% include sidebar.html %}
-  <main id="main-content" class="site-content">
-    <h2>{{ page.title | smartify }}</h2>
-    {{ page.content }}
-  </main>
-  {% include footer.html %}
+  <div class="grid-wrapper">
+    {% include header.html %}
+    {% include nav.html %}
+    {% include sidebar.html %}
+    <main id="main-content" class="site-content">
+      <h2>{{ page.title | smartify }}</h2>
+      {{ page.content }}
+    </main>
+    {% include footer.html %}
+  </div>
 </body>
 </html>
