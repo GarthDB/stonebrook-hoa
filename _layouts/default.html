@@ -2,12 +2,12 @@
 
 <body>
   {% include header.html %}
+  {% include nav.html %}
   <div class="site">
-    {% include nav.html %}
+    {% include sidebar.html %}
     <main id="main-content" class="site-content">
       {{content}}
     </main>
-    <div class="clear"></div>
   </div>
   {% include footer.html %}
 </body>

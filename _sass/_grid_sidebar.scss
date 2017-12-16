@@ -1,0 +1,14 @@
+.content-sidebar {
+  display: block;
+  box-sizing: border-box;
+  grid-area: sidebar;
+}
+
+.content-sidebar ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  li {
+    margin-bottom: 20px;
+  }
+}
