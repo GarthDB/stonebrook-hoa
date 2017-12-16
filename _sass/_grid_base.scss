@@ -15,6 +15,11 @@ body {
   min-height: 100%;
   padding-bottom: 175px;
   position: relative;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-areas: ". header header header ."
+                       ". nav nav nav ."
+                       "sidebar . siteContent siteContent siteContent"
+                       ". footer footer footer .";
 }
 
 a {
@@ -46,23 +51,8 @@ a {
   width: 6rem;
 }
 
-.site {
-  max-width: 1080px;
-  position: relative;
-  height: auto;
-  margin: 0 auto;
-  padding: 0 1rem;
-  box-sizing: border-box;
-  display: flex;
-}
-
-.clear {
-  clear: both;
-}
-
 .site-content {
-  flex: 0 0 calc(100% * 4/5);
-  padding-left: 40px;
+  grid-area: siteContent;
   box-sizing: border-box;
 }
 

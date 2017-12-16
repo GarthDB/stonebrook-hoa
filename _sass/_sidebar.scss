@@ -1,0 +1,13 @@
+.content-sidebar {
+  flex: 0 0 calc(100% * 1/5);
+  box-sizing: border-box;
+}
+
+.content-sidebar ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  li {
+    margin-bottom: 20px;
+  }
+}
