@@ -2,9 +2,6 @@
   <ul class="site-nav__list">
   {% for page in site.pages %}{% if page.layout == "page" %}
     <li class="site-nav__item"><a class="site-nav__link" href="{{ site.url }}{{ site.baseurl }}{{page.url}}">{{page.title}}</a></li>
-  {% endif %}
-  {% if page.layout == "grid" %}
-    <li class="site-nav__item"><a class="site-nav__link" href="{{ site.url }}{{ site.baseurl }}{{page.url}}">{{page.title}}</a></li>
   {% endif %}{% endfor %}
   </ul>
 </nav>

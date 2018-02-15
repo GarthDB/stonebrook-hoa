@@ -6,11 +6,11 @@
 }
 
 .input-set {
-  margin: 5px 0;
+  margin: .277rem 0;
 }
 
 .input-set__label--checkbox {
-  margin-left: 5px;
+  margin-left: .277rem;
   cursor: pointer;
 }
 
@@ -18,19 +18,24 @@
   cursor: pointer;
 }
 
+.input-set__textarea {
+  width: 100%;
+  max-width: 32rem;
+}
+
 .contact-form {
   position: relative;
-  padding: 20px;
+  padding: 1.11rem;
   perspective: 3000px;
 }
 
 .contact-form__legend {
-  float: left;
+  display: inline-block;
   margin: 0;
   padding: 0;
   position: relative;
-  left: -20px;
-  top: 5px;
+  left: -1.11rem;
+  top: .277rem;
 }
 
 .contact-form__checkboxes {
@@ -40,8 +45,8 @@
 
 .contact-form__fieldset {
   border: none;
-  margin: 5px 0;
-  padding: 0 20px;
+  margin: .277rem 0;
+  padding: 0 1.11rem;
 }
 
 .contact-form__overlay {
@@ -59,7 +64,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-radius: 5px;
+  border-radius: .277rem;
 }
 
 .contact-form__inputs {
@@ -68,13 +73,29 @@
 
 .contact-form__inputs:disabled {
   > *:not(.contact-form__overlay) {
-    filter: blur(5px);
+    filter: blur(.277rem);
     transition: filter .4s;
   }
 
   .contact-form__overlay {
     opacity: 1;
     transform: rotateX(0deg) translate(0, 0);
+  }
+}
+
+@media only screen and (max-width: 740px) {
+  .contact-form {
+    padding: 1.11rem 0 2.25rem;
+  }
+  .contact-form__inputs {
+    padding: 0;
+    width: 100%;
+  }
+  .input-set__label {
+    display: block;
+  }
+  .input-set__textarea {
+    max-width: calc(100% - .625rem);
   }
 }
 
