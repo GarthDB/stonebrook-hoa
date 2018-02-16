@@ -5,6 +5,7 @@ require 'yaml'
 require 'fileutils'
 require 'rbconfig'
 require 'html-proofer'
+require 'scss_lint/rake_task'
 
 # == Configuration =============================================================
 
@@ -41,6 +42,9 @@ multitask 'build_parallel' => ['watch', 'reload']
 task :default do
   sh "bundle exec jekyll build"
   Rake::Task['build_parallel'].invoke
+end
+
+SCSSLint::RakeTask.new do |task|
 end
 
 # rake test

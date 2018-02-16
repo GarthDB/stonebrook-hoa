@@ -1,0 +1,17 @@
+scss_files: '_sass/**/*.scss'
+
+linters:
+
+  ColorVariable:
+    enabled: false
+
+  PropertySortOrder:
+    order: concentric
+
+  SelectorFormat:
+    convention: hyphenated_BEM
+
+  PropertySpelling:
+    extra_properties:
+      - cx
+      - cy

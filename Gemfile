@@ -4,6 +4,7 @@ gem 'github-pages', group: :jekyll_plugins
 
 group :dev do
   gem 'mdl'
+  gem 'scss_lint'
 end
 
 group :test do

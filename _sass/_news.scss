@@ -1,13 +1,15 @@
 .news-article {
+  clear: both;
   margin: .625rem 0 1.875rem;
   padding-bottom: 1.11rem;
-  clear: both;
   max-width: 37.5rem;
+
   aside {
     float: left;
     margin-right: .625rem;
   }
-  &:not(:last-child){
-    border-bottom: 1px solid rgba(0,0,0,0.4);
+
+  &:not(:last-child) {
+    border-bottom: 1px solid rgba(0, 0, 0, .4);
   }
 }

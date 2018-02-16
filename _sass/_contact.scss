@@ -1,8 +1,7 @@
 .input-set__label {
-  display: inline-block;
-  min-width: calc(80px - 1rem);
-  vertical-align: top;
+  display: block;
   margin-right: 1rem;
+  min-width: calc(80px - 1rem);
 }
 
 .input-set {
@@ -20,22 +19,22 @@
 
 .input-set__textarea {
   width: 100%;
-  max-width: 32rem;
+  max-width: calc(100% - .625rem);
 }
 
 .contact-form {
   position: relative;
-  padding: 1.11rem;
+  padding: 1.11rem 0 2.25rem;
   perspective: 3000px;
 }
 
 .contact-form__legend {
   display: inline-block;
+  position: relative;
+  top: .277rem;
+  left: -1.11rem;
   margin: 0;
   padding: 0;
-  position: relative;
-  left: -1.11rem;
-  top: .277rem;
 }
 
 .contact-form__checkboxes {
@@ -44,99 +43,105 @@
 }
 
 .contact-form__fieldset {
-  border: none;
   margin: .277rem 0;
+  border: 0;
   padding: 0 1.11rem;
 }
 
 .contact-form__overlay {
-  background: rgba(236, 236, 236, 0.9);
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  transform-origin: bottom;
-  transform: rotateX(-90deg) translate(0, 500px);
-  transition: transform .4s ease, opacity .4s ease;
-  opacity: 0;
   display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  transform: rotateX(-90deg) translate(0, 500px);
+  transform-origin: bottom;
+  transition: transform .4s ease, opacity .4s ease;
+  opacity: 0;
   border-radius: .277rem;
+  background: rgba(236, 236, 236, .9);
 }
 
 .contact-form__inputs {
   border: 0;
+  padding: 0;
+  width: 100%;
 }
 
 .contact-form__inputs:disabled {
   > *:not(.contact-form__overlay) {
-    filter: blur(.277rem);
     transition: filter .4s;
+    filter: blur(.277rem);
   }
 
   .contact-form__overlay {
-    opacity: 1;
     transform: rotateX(0deg) translate(0, 0);
+    opacity: 1;
   }
 }
 
-@media only screen and (max-width: 740px) {
+@media only screen and (min-width: 740px) {
   .contact-form {
-    padding: 1.11rem 0 2.25rem;
+    padding: 1.11rem;
   }
+
   .contact-form__inputs {
     padding: 0;
-    width: 100%;
+    width: auto;
   }
+
   .input-set__label {
-    display: block;
+    display: inline-block;
+    vertical-align: top;
   }
+
   .input-set__textarea {
-    max-width: calc(100% - .625rem);
+    max-width: 32rem;
   }
 }
 
 @keyframes rotate {
   0% {
+    transform: rotate(0deg);
     cx: 12px;
     cy: 32px;
-    transform: rotate(0deg);
   }
 
   25% {
+    transform: rotate(360deg);
     cx: 26px;
     cy: 32px;
-    transform: rotate(360deg);
   }
 
   50% {
+    transform: rotate(720deg);
     cx: 26px;
     cy: 32px;
-    transform: rotate(720deg);
   }
 
   75% {
+    transform: rotate(1080deg);
     cx: 12px;
     cy: 32px;
-    transform: rotate(1080deg);
   }
 
   100% {
+    transform: rotate(1440deg);
     cx: 12px;
     cy: 32px;
-    transform: rotate(1440deg);
   }
 }
 
-#bgcircle {
+.bgcircle {
   fill: rgba(0, 0, 0, .2);
 }
 
-#spinner {
-  fill: #1473e6;
+.spinner {
   transform-origin: 32px 32px;
   animation: rotate 3.5s linear infinite;
+  fill: #1473e6;
 }

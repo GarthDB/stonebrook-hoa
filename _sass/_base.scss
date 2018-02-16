@@ -1,29 +1,29 @@
 // Base Styles
 :root {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 html {
-  height: 100%;
   margin: 0;
   padding: 0;
+  height: 100%;
 }
 
 // Defaults for the body
 body {
-  box-sizing: border-box;
+  position: relative;
+  margin: 0;
+  padding-bottom: 0;
+  min-height: 100%;
   color: #333;
   font: normal normal normal 1rem/1.5 "Source Sans Pro", sans-serif;
   font-weight: 400;
-  margin: 0;
-  min-height: 100%;
-  padding-bottom: 9.72rem;
-  position: relative;
+  box-sizing: border-box;
 }
 
 a {
-  color: rgb(49, 107, 158);
   text-decoration: none;
+  color: rgb(49, 107, 158);
 
   &:focus,
   &:hover {
@@ -32,19 +32,20 @@ a {
 }
 
 .home-logo {
-  height: 6rem;
   margin-right: 1rem;
   width: 6rem;
+  height: 6rem;
 }
 
 .site {
-  max-width: 67.5rem;
+  display: flex;
   position: relative;
-  height: auto;
+  flex-direction: column;
   margin: 0 auto;
   padding: 0 1rem;
+  max-width: 67.5rem;
+  height: auto;
   box-sizing: border-box;
-  display: flex;
 }
 
 .clear {
@@ -52,58 +53,67 @@ a {
 }
 
 .site-content {
-  flex: 0 0 calc(100% * 4/5);
-  padding-left: 2.22rem;
+  flex: 0 0 auto;
+  padding: 0;
   box-sizing: border-box;
 }
 
 .screen-reader-text {
-  overflow: hidden;
+  position: absolute;
   width: 1px;
   height: 1px;
-  position: absolute;
+  overflow: hidden;
   text-indent: -100vw;
 }
 
 .division-table {
   border-collapse: collapse;
   border-spacing: 0;
-  td, & th {
+
+  td,
+  & th {
     border: 1px solid;
     padding: 3px .277rem;
   }
+
   td:nth-last-child(-n+2) {
     text-align: right;
   }
 }
 
 .stonebrook-map {
-  text-align: left;
-}
-.stonebrook-map__image {
-  width: 300px;
+  text-align: center;
 }
 
-@media only screen and (max-width: 600px) {
+.stonebrook-map__image {
+  width: 250px;
+}
+
+@media only screen and (min-width: 600px) {
   .stonebrook-map {
-    text-align: center;
+    text-align: left;
   }
+
   .stonebrook-map__image {
-    width: 250px;
+    width: 300px;
   }
 }
-@media only screen and (max-width: 740px) {
+
+@media only screen and (min-width: 740px) {
   :root {
-    font-size: 18px;
+    font-size: 16px;
   }
+
   body {
-    padding-bottom: 0;
+    padding-bottom: 9.72rem;
   }
+
   .site {
-    flex: 0 0 auto;
-    flex-direction: column;
+    flex-direction: row;
   }
+
   .site-content {
-    padding: 0;
+    flex: 0 0 calc(100% * 4/5);
+    padding-left: 2.22rem;
   }
 }
