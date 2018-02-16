@@ -77,6 +77,21 @@ a {
   }
 }
 
+.stonebrook-map {
+  text-align: left;
+}
+.stonebrook-map__image {
+  width: 300px;
+}
+
+@media only screen and (max-width: 600px) {
+  .stonebrook-map {
+    text-align: center;
+  }
+  .stonebrook-map__image {
+    width: 250px;
+  }
+}
 @media only screen and (max-width: 740px) {
   :root {
     font-size: 18px;
