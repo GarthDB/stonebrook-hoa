@@ -1,23 +1,11 @@
 ---
 ---
 document.addEventListener 'DOMContentLoaded', ->
-  contactForm = document.getElementById 'contact-form'
-  inputs = contactForm.querySelectorAll '.contact-form__inputs'
-  cancel = document.getElementById 'contact-form__cancel'
+  navExpander = document.getElementById 'nav-expander'
 
-  toggleInputs = (disabled = true) ->
-    inputs.forEach (input) ->
-      input.disabled = disabled
-      return
-
-  submitListener = (e) ->
-    toggleInputs()
+  toggleExpander = (e) ->
+    e.currentTarget.parentElement.classList.toggle("open");
     return false
 
-  cancelListener = (e) ->
-    console.log('cancel')
-    toggleInputs(false)
-
-  contactForm.addEventListener 'submit', submitListener, false
-  cancel.addEventListener 'click', cancelListener, false
+  navExpander.addEventListener 'click', toggleExpander, false
   return

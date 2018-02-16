@@ -1,4 +1,8 @@
 // Base Styles
+:root {
+  font-size: 16px;
+}
+
 html {
   height: 100%;
   margin: 0;
@@ -9,11 +13,11 @@ html {
 body {
   box-sizing: border-box;
   color: #333;
-  font: normal normal normal 1rem/1.5 'Source Sans Pro', sans-serif;
+  font: normal normal normal 1rem/1.5 "Source Sans Pro", sans-serif;
   font-weight: 400;
   margin: 0;
   min-height: 100%;
-  padding-bottom: 175px;
+  padding-bottom: 9.72rem;
   position: relative;
 }
 
@@ -27,19 +31,6 @@ a {
   }
 }
 
-// Media Queries for Text Size Changes
-@media only screen and (max-width: 800px) {
-  :root {
-    font-size: 16px;
-  }
-}
-
-@media only screen and (min-width: 800px) {
-  :root {
-    font-size: 18px;
-  }
-}
-
 .home-logo {
   height: 6rem;
   margin-right: 1rem;
@@ -47,7 +38,7 @@ a {
 }
 
 .site {
-  max-width: 1080px;
+  max-width: 67.5rem;
   position: relative;
   height: auto;
   margin: 0 auto;
@@ -62,7 +53,7 @@ a {
 
 .site-content {
   flex: 0 0 calc(100% * 4/5);
-  padding-left: 40px;
+  padding-left: 2.22rem;
   box-sizing: border-box;
 }
 
@@ -79,9 +70,40 @@ a {
   border-spacing: 0;
   td, & th {
     border: 1px solid;
-    padding: 3px 5px;
+    padding: 3px .277rem;
   }
   td:nth-last-child(-n+2) {
     text-align: right;
+  }
+}
+
+.stonebrook-map {
+  text-align: left;
+}
+.stonebrook-map__image {
+  width: 300px;
+}
+
+@media only screen and (max-width: 600px) {
+  .stonebrook-map {
+    text-align: center;
+  }
+  .stonebrook-map__image {
+    width: 250px;
+  }
+}
+@media only screen and (max-width: 740px) {
+  :root {
+    font-size: 18px;
+  }
+  body {
+    padding-bottom: 0;
+  }
+  .site {
+    flex: 0 0 auto;
+    flex-direction: column;
+  }
+  .site-content {
+    padding: 0;
   }
 }

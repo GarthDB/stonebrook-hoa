@@ -3,7 +3,7 @@ layout: page
 title: Contact Us
 permalink: /contact/
 scripts:
-  - ../js/main.js
+  - ../js/contact.js
 ---
 <p>If you have any questions or would like to report a violation of the covenants in the neighborhood please use this form to send us a message.</p>
 <form action="#" id="contact-form" class="contact-form">
@@ -20,7 +20,7 @@ scripts:
       <div class="clear"></div>
     </fieldset>
     <div class="input-set"><label for="input-date" class="input-set__label">Date of violation observation (if applicable)</label><input id="input-date" type="date" name="date" class="input-set__input"></div>
-    <div class="input-set"><label for="input-content" class="input-set__label">Message</label><textarea id="input-content" name="content" rows="8" cols="80"></textarea></div> <input type="submit" value="Send Message">
+    <div class="input-set"><label for="input-content" class="input-set__label">Message</label><textarea id="input-content" class="input-set__textarea" name="content" rows="8"></textarea></div> <input type="submit" value="Send Message">
     <div class="contact-form__overlay">
       <svg class="indefinite-spinner" height="64" width="64">
         <circle id="bgcircle" cx="32" cy="32" r="30"/>

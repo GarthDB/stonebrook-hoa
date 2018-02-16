@@ -1,9 +1,14 @@
 <nav class="site-nav">
+  <header id="nav-expander" class="site-nav__hamburger">
+    <svg class="site-nav__hamburger-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" enable-background="new 0 0 18 18" width="18" height="18">
+      <rect x="1" y="3" width="16" height="2"/>
+      <rect x="1" y="8" width="16" height="2"/>
+      <rect x="1" y="13" width="16" height="2"/>
+    </svg>
+    <span>Menu</span>
+  </header>
   <ul class="site-nav__list">
   {% for page in site.pages %}{% if page.layout == "page" %}
-    <li class="site-nav__item"><a class="site-nav__link" href="{{ site.url }}{{ site.baseurl }}{{page.url}}">{{page.title}}</a></li>
-  {% endif %}
-  {% if page.layout == "grid" %}
     <li class="site-nav__item"><a class="site-nav__link" href="{{ site.url }}{{ site.baseurl }}{{page.url}}">{{page.title}}</a></li>
   {% endif %}{% endfor %}
   </ul>

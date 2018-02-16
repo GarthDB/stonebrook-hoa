@@ -8,6 +8,13 @@
   margin: 0;
   list-style: none;
   li {
-    margin-bottom: 20px;
+    margin-bottom: 1.11rem;
+  }
+}
+
+@media only screen and (max-width: 740px) {
+  .content-sidebar {
+    flex: 0 0 auto;
+    order: 1;
   }
 }
