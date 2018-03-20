@@ -15,6 +15,7 @@
 }
 
 @media only screen and (min-width: 740px) {
+  // scss-lint:disable PropertyUnits
   .content-sidebar {
     flex: 0 0 calc(100% * 1/5);
     order: 0;

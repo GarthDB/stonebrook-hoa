@@ -30,6 +30,7 @@
 }
 
 @media only screen and (min-width: 740px) {
+  // scss-lint:disable PropertyUnits
   .site-header__title {
     a {
       background-image: url('../img/header.jpg');
@@ -38,6 +39,7 @@
 }
 
 @media only screen and (min-width: 1080px) {
+  // scss-lint:disable PropertyUnits
   .site-header__title {
     text-indent: initial;
 
@@ -53,18 +55,18 @@
       text-align: center;
       text-transform: uppercase;
       letter-spacing: .25rem;
-      color: rgba(255, 255, 255, .9);
+      color: $header-link-color;
 
       &:hover {
         text-decoration: none;
-        color: rgba(255, 255, 255, .8);
+        color: $header-link-hover-color;
       }
     }
   }
 
   .site-header {
     display: block;
-    background: #333;
+    background: $body-color;
     padding: 3.25rem 0;
     max-width: 100%;
     height: auto;

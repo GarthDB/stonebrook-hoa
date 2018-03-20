@@ -2,9 +2,6 @@ scss_files: '_sass/**/*.scss'
 
 linters:
 
-  ColorVariable:
-    enabled: false
-
   PropertySortOrder:
     order: concentric
 
@@ -15,3 +12,8 @@ linters:
     extra_properties:
       - cx
       - cy
+
+  PropertyUnits:
+    global: ['rem', '%', 's']
+    properties:
+      border: ['px', 'rem']

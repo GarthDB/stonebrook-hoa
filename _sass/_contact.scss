@@ -25,7 +25,7 @@
 .contact-form {
   position: relative;
   padding: 1.11rem 0 2.25rem;
-  perspective: 3000px;
+  perspective: pxtorem(3000px);
 }
 
 .contact-form__legend {
@@ -63,7 +63,7 @@
   transition: transform .4s ease, opacity .4s ease;
   opacity: 0;
   border-radius: .277rem;
-  background: rgba(236, 236, 236, .9);
+  background: $overlay-bg-color;
 }
 
 .contact-form__inputs {
@@ -105,6 +105,7 @@
 }
 
 @keyframes rotate {
+  // scss-lint:disable PropertyUnits
   0% {
     transform: rotate(0deg);
     cx: 12px;
@@ -137,11 +138,11 @@
 }
 
 .bgcircle {
-  fill: rgba(0, 0, 0, .2);
+  fill: rgba(0, 0, 0, .2); // scss-lint:disable ColorVariable
 }
 
 .spinner {
-  transform-origin: 32px 32px;
+  transform-origin: pxtorem(32px) pxtorem(32px);
   animation: rotate 3.5s linear infinite;
-  fill: #1473e6;
+  fill: #1473e6; // scss-lint:disable ColorVariable
 }
