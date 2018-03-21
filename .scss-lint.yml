@@ -1,5 +1,7 @@
 scss_files: '_sass/**/*.scss'
 
+exclude: 'css/main.scss'
+
 linters:
 
   PropertySortOrder:
@@ -14,6 +16,6 @@ linters:
       - cy
 
   PropertyUnits:
-    global: ['rem', '%', 's']
+    global: ['rem', '%', 's', 'vw', 'vh']
     properties:
       border: ['px', 'rem']

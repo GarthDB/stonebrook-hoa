@@ -1,6 +1,8 @@
+$sidebar-order: 1;
+
 .content-sidebar {
   flex: 0 0 auto;
-  order: 1;
+  order: $sidebar-order;
   box-sizing: border-box;
 
   ul {
@@ -14,10 +16,11 @@
   }
 }
 
-@media only screen and (min-width: 740px) {
-  // scss-lint:disable PropertyUnits
+@media only screen and (min-width: map-get($breakpoints, 'medium')) {
+  $sidebar-order: 0;
+
   .content-sidebar {
     flex: 0 0 calc(100% * 1/5);
-    order: 0;
+    order: $sidebar-order;
   }
 }

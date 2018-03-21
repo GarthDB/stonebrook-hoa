@@ -1,5 +1,6 @@
 .site-header {
   position: relative;
+  background: color('body');
   height: 9.375rem;
 }
 
@@ -17,19 +18,21 @@
     right: 0;
     bottom: 0;
     left: 0;
-    transition: 1s filter;
+    transition: 0.5s all;
     background-image: url('../img/header-small.jpg');
     background-position: center;
     background-size: cover;
-    filter: grayscale(100%);
+    mix-blend-mode: screen;
+    filter: grayscale(100%) contrast(200%);
 
     &:hover {
+      mix-blend-mode: initial;
       filter: grayscale(0%);
     }
   }
 }
 
-@media only screen and (min-width: 740px) {
+@media only screen and (min-width: map-get($breakpoints, 'medium')) {
   // scss-lint:disable PropertyUnits
   .site-header__title {
     a {
@@ -38,7 +41,7 @@
   }
 }
 
-@media only screen and (min-width: 1080px) {
+@media only screen and (min-width: map-get($breakpoints, 'large')) {
   // scss-lint:disable PropertyUnits
   .site-header__title {
     text-indent: initial;
@@ -55,18 +58,18 @@
       text-align: center;
       text-transform: uppercase;
       letter-spacing: .25rem;
-      color: $header-link-color;
+      color: color('header-link');
 
       &:hover {
         text-decoration: none;
-        color: $header-link-hover-color;
+        color: color('header-link-hover');
       }
     }
   }
 
   .site-header {
     display: block;
-    background: $body-color;
+    background: color('body');
     padding: 3.25rem 0;
     max-width: 100%;
     height: auto;

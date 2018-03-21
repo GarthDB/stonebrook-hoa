@@ -1,0 +1,88 @@
+// scss-lint:disable ColorVariable
+
+$default-breakpoint: 'small';
+
+$font-families: (
+  serif: unquote("'Roboto Slab', serif"),
+  sans-serif: unquote("'Source Sans Pro', sans-serif"),
+);
+
+$breakpoints: (
+  small: 400px,
+  medium: 740px,
+  large: 1080px,
+);
+
+$typography: (
+  small: (
+    ':root': (
+      font-size: 100%,
+    ),
+    body: (
+      font-size: 1rem,
+      line-height: 1.25,
+    ),
+    h1: (
+      font-size: 1.8rem,
+      line-height: 1.25,
+      font-family: map-get($font-families, 'serif'),
+      font-weight: 700,
+    ),
+    h2: (
+      font-size: 1.5rem,
+      line-height: 1.15,
+      font-family: map-get($font-families, 'serif'),
+      font-weight: 700,
+    ),
+    h3: (
+      font-size: 1.25rem,
+      line-height: 1.14,
+      font-family: map-get($font-families, 'serif'),
+      font-weight: 700,
+    )
+  ),
+  medium: (
+    ':root': (
+      font-size: 112.5%,
+    ),
+    body: (
+      font-size: 1rem,
+      line-height: 1.375,
+    ),
+    h1: (
+      font-size: 2rem,
+      line-height: 1.05,
+    ),
+    h2: (
+      font-size: 1.75rem,
+      line-height: 1.25,
+    ),
+    h3: (
+      font-size: 1rem,
+      line-height: 1.25,
+      text-transform: uppercase,
+      font-family: map-get($font-families, 'sans-serif'),
+    )
+  )
+);
+
+$hue: 240;
+$color-seed: hsl($hue, 100%, 50%);
+
+$color-map: (
+  body: $complementary-neutral-dark,
+  link: $primary-color,
+  nav-bg: $complementary-neutral-light,
+  nav-link-color: $complementary-neutral-dark,
+  header-link: $complementary-neutral-light,
+  header-link-hover: lighten($complementary-neutral, 25),
+  box-shadow: rgba($complementary-neutral-dark, .25),
+  hr: $complementary-neutral-light,
+  footer-bg: $complementary-neutral-dark,
+  dark-color: $complementary-neutral-light,
+  overlay-bg: rgba(lighten($complementary-neutral, 40), .9),
+);
+
+$base-font-size: 16px;
+
+$footer-height: 9.72rem;

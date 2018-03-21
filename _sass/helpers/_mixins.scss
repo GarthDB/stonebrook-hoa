@@ -1,0 +1,27 @@
+@mixin sasstocssvar($name, $val) {
+  --#{$name}: #{$val};
+}
+
+@mixin print($declarations) {
+  @each $property, $value in $declarations {
+    #{$property}: $value;
+  }
+}
+
+@mixin size-decls($size, $selector, $type-map: $typography, $bp-map: $breakpoints, $default-bp: $default-breakpoint) {
+  @if map-has-key($type-map, $size) and map-has-key(map-get($type-map, $size), $selector) {
+    @if $size == $default-bp {
+      @include print(map-nested-get($type-map, $size, $selector));
+    } @else {
+      @media only screen and (min-width: #{map-get($bp-map, $size)}) {
+        @include print(map-nested-get($type-map, $size, $selector));
+      }
+    }
+  }
+}
+
+@mixin type-decls($selector, $type-map: $typography) {
+  @each $size, $vals in $type-map {
+    @include size-decls($size, $selector);
+  }
+}

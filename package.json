@@ -4,7 +4,7 @@
   "description": "New website for the Stonebrook Homeowners Association.",
   "main": "index.js",
   "scripts": {
-    "colorguard": "colorguard",
+    "colorguard": "colorguard --file _site/css/main.css --options .colorguard.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
