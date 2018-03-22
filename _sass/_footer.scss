@@ -1,10 +1,10 @@
 .site-footer {
   position: relative;
   bottom: 0;
-  background: linear-gradient(to bottom, #2b2b2b, #4c4c4c 100%) #4c4c4c;
+  background: color('footer-bg');
   padding: 1.11rem 0;
   width: 100%;
-  color: #fff;
+  color: color('dark-color');
   box-sizing: border-box;
 }
 
@@ -18,9 +18,11 @@
   vertical-align: top;
 }
 
-@media only screen and (min-width: 740px) {
+@media only screen and (min-width: map-get($breakpoints, 'medium')) {
+  // scss-lint:disable PropertyUnits
   .site-footer {
     position: absolute;
+    height: $footer-height;
   }
 
   .footer-address {

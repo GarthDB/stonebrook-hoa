@@ -1,5 +1,59 @@
+.site, .site-nav {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 67.5rem;
+}
+
 :root {
-  font-size: 18px;
+  font-size: 100%;
+  --site-flex-direction: column;
+}
+@media only screen and (min-width: 740px) {
+  :root {
+    font-size: 112.5%;
+  }
+}
+
+h1 {
+  font-size: 1.8rem;
+  line-height: 1.25;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 700;
+}
+@media only screen and (min-width: 740px) {
+  h1 {
+    font-size: 2rem;
+    line-height: 1.05;
+  }
+}
+
+h2 {
+  font-size: 1.5rem;
+  line-height: 1.15;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 700;
+}
+@media only screen and (min-width: 740px) {
+  h2 {
+    font-size: 1.75rem;
+    line-height: 1.25;
+  }
+}
+
+h3 {
+  font-size: 1.25rem;
+  line-height: 1.14;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 700;
+}
+@media only screen and (min-width: 740px) {
+  h3 {
+    font-size: 1rem;
+    line-height: 1.25;
+    text-transform: uppercase;
+    font-family: 'Source Sans Pro', sans-serif;
+  }
 }
 
 html {
@@ -9,19 +63,27 @@ html {
 }
 
 body {
+  font-size: 1rem;
+  line-height: 1.25;
   position: relative;
   margin: 0;
-  padding-bottom: 0;
+  padding-bottom: var(--body-bottom-padding, 0);
   min-height: 100%;
-  color: #333;
-  font: normal normal normal 1rem/1.5 "Source Sans Pro", sans-serif;
+  color: #202c36;
+  font: normal normal normal 1rem/1.5 'Source Sans Pro', sans-serif;
   font-weight: 400;
   box-sizing: border-box;
+}
+@media only screen and (min-width: 740px) {
+  body {
+    font-size: 1rem;
+    line-height: 1.375;
+  }
 }
 
 a {
   text-decoration: none;
-  color: #316b9e;
+  color: #e3791c;
 }
 a:focus, a:hover {
   text-decoration: underline;
@@ -36,10 +98,8 @@ a:focus, a:hover {
 .site {
   display: flex;
   position: relative;
-  flex-direction: column;
-  margin: 0 auto;
+  flex-direction: var(--site-flex-direction);
   padding: 0 1rem;
-  max-width: 67.5rem;
   height: auto;
   box-sizing: border-box;
 }
@@ -50,7 +110,7 @@ a:focus, a:hover {
 
 .site-content {
   flex: 0 0 auto;
-  padding: 0;
+  padding: 0 0 0 var(--site-content-padding-left, 0);
   box-sizing: border-box;
 }
 
@@ -68,7 +128,7 @@ a:focus, a:hover {
 }
 .division-table td, .division-table th {
   border: 1px solid;
-  padding: 3px .277rem;
+  padding: 0.1875rem 0.3125rem;
 }
 .division-table td:nth-last-child(-n+2) {
   text-align: right;
@@ -79,7 +139,7 @@ a:focus, a:hover {
 }
 
 .stonebrook-map__image {
-  width: 250px;
+  width: 15.625rem;
 }
 
 @media only screen and (min-width: 600px) {
@@ -93,24 +153,18 @@ a:focus, a:hover {
 }
 @media only screen and (min-width: 740px) {
   :root {
-    font-size: 16px;
-  }
-
-  body {
-    padding-bottom: 9.72rem;
-  }
-
-  .site {
-    flex-direction: row;
+    --body-bottom-padding: 9.72rem;
+    --site-flex-direction: row;
+    --site-content-padding-left: 2.22rem;
   }
 
   .site-content {
     flex: 0 0 calc(100% * 4/5);
-    padding-left: 2.22rem;
   }
 }
 .site-header {
   position: relative;
+  background: #202c36;
   height: 9.375rem;
 }
 
@@ -128,13 +182,15 @@ a:focus, a:hover {
   right: 0;
   bottom: 0;
   left: 0;
-  transition: 1s filter;
+  transition: 0.5s all;
   background-image: url("../img/header-small.jpg");
   background-position: center;
   background-size: cover;
-  filter: grayscale(100%);
+  mix-blend-mode: screen;
+  filter: grayscale(100%) contrast(200%);
 }
 .site-header__title a:hover {
+  mix-blend-mode: initial;
   filter: grayscale(0%);
 }
 
@@ -159,25 +215,23 @@ a:focus, a:hover {
     text-align: center;
     text-transform: uppercase;
     letter-spacing: .25rem;
-    color: rgba(255, 255, 255, 0.9);
+    color: #c9d5df;
   }
   .site-header__title a:hover {
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.8);
+    color: #afc1d0;
   }
 
   .site-header {
     display: block;
-    background: #333;
+    background: #202c36;
     padding: 3.25rem 0;
     max-width: 100%;
     height: auto;
   }
 }
 .site-nav {
-  margin: 0 auto;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
-  max-width: 67.5rem;
+  box-shadow: 0 2px 2px 0 rgba(32, 44, 54, 0.25);
 }
 .site-nav rect {
   transform: rotate(0) translate(0, 0);
@@ -196,6 +250,13 @@ a:focus, a:hover {
 .site-nav.open .site-nav__list {
   height: 5.2rem;
 }
+.site-nav a {
+  text-decoration: underline;
+  color: #202c36;
+}
+.site-nav a:hover {
+  text-decoration: none;
+}
 
 .site-nav__hamburger {
   display: flex;
@@ -205,7 +266,7 @@ a:focus, a:hover {
   padding: .5rem;
 }
 .site-nav__hamburger svg {
-  margin-right: 4px;
+  margin-right: 0.25rem;
 }
 
 .site-nav__list {
@@ -224,6 +285,16 @@ a:focus, a:hover {
 @media only screen and (min-width: 401px) {
   .site-nav {
     box-shadow: none;
+  }
+  .site-nav::before {
+    position: absolute;
+    left: 50%;
+    z-index: -1;
+    margin-left: -50vw;
+    background: #c9d5df;
+    width: 100vw;
+    height: 100%;
+    content: '';
   }
 
   .site-nav__hamburger {
@@ -260,10 +331,10 @@ a:focus, a:hover {
 .site-footer {
   position: relative;
   bottom: 0;
-  background: linear-gradient(to bottom, #2b2b2b, #4c4c4c 100%) #4c4c4c;
+  background: #202c36;
   padding: 1.11rem 0;
   width: 100%;
-  color: #fff;
+  color: #c9d5df;
   box-sizing: border-box;
 }
 
@@ -280,6 +351,7 @@ a:focus, a:hover {
 @media only screen and (min-width: 740px) {
   .site-footer {
     position: absolute;
+    height: 9.72rem;
   }
 
   .footer-address {
@@ -313,7 +385,7 @@ a:focus, a:hover {
 .contact-form {
   position: relative;
   padding: 1.11rem 0 2.25rem;
-  perspective: 3000px;
+  perspective: 187.5rem;
 }
 
 .contact-form__legend {
@@ -351,7 +423,7 @@ a:focus, a:hover {
   transition: transform .4s ease, opacity .4s ease;
   opacity: 0;
   border-radius: .277rem;
-  background: rgba(236, 236, 236, 0.9);
+  background: rgba(223, 230, 236, 0.9);
 }
 
 .contact-form__inputs {
@@ -416,11 +488,11 @@ a:focus, a:hover {
   }
 }
 .bgcircle {
-  fill: rgba(0, 0, 0, 0.2);
+  fill: rgba(0, 0, 0, 0.25);
 }
 
 .spinner {
-  transform-origin: 32px 32px;
+  transform-origin: 2rem 2rem;
   animation: rotate 3.5s linear infinite;
   fill: #1473e6;
 }
@@ -436,5 +508,5 @@ a:focus, a:hover {
   margin-right: .625rem;
 }
 .news-article:not(:last-child) {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  border-bottom: 1px solid #c9d5df;
 }

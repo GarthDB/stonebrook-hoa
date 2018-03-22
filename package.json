@@ -1,0 +1,23 @@
+{
+  "name": "stonebrook-hsa",
+  "version": "6.0.0",
+  "description": "New website for the Stonebrook Homeowners Association.",
+  "main": "index.js",
+  "scripts": {
+    "colorguard": "colorguard --file _site/css/main.css --options .colorguard.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GarthDB/stonebrook-hoa.git"
+  },
+  "author": "Garth Braithwaite <garthdb@gmail.com> (http://garthdb.com)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/GarthDB/stonebrook-hoa/issues"
+  },
+  "homepage": "https://github.com/GarthDB/stonebrook-hoa#readme",
+  "dependencies": {
+    "colorguard": "^1.2.1"
+  }
+}

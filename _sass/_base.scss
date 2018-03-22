@@ -1,6 +1,18 @@
-// Base Styles
 :root {
-  font-size: 18px;
+  @include type-decls(#{&});
+  --site-flex-direction: column;
+}
+
+h1 {
+  @include type-decls(#{&});
+}
+
+h2 {
+  @include type-decls(#{&});
+}
+
+h3 {
+  @include type-decls(#{&});
 }
 
 html {
@@ -11,19 +23,20 @@ html {
 
 // Defaults for the body
 body {
+  @include type-decls(#{&});
   position: relative;
   margin: 0;
-  padding-bottom: 0;
+  padding-bottom: var(--body-bottom-padding, 0);
   min-height: 100%;
-  color: #333;
-  font: normal normal normal 1rem/1.5 "Source Sans Pro", sans-serif;
+  color: color('body');
+  font: normal normal normal 1rem / 1.5 map-get($font-families, 'sans-serif');
   font-weight: 400;
   box-sizing: border-box;
 }
 
 a {
   text-decoration: none;
-  color: rgb(49, 107, 158);
+  color: color('link');
 
   &:focus,
   &:hover {
@@ -38,12 +51,11 @@ a {
 }
 
 .site {
+  @extend %site;
   display: flex;
   position: relative;
-  flex-direction: column;
-  margin: 0 auto;
+  flex-direction: var(--site-flex-direction);
   padding: 0 1rem;
-  max-width: 67.5rem;
   height: auto;
   box-sizing: border-box;
 }
@@ -54,14 +66,14 @@ a {
 
 .site-content {
   flex: 0 0 auto;
-  padding: 0;
+  padding: 0 0 0 var(--site-content-padding-left, 0);
   box-sizing: border-box;
 }
 
 .screen-reader-text {
   position: absolute;
-  width: 1px;
-  height: 1px;
+  width: 1px; // scss-lint:disable PropertyUnits
+  height: 1px; // scss-lint:disable PropertyUnits
   overflow: hidden;
   text-indent: -100vw;
 }
@@ -73,7 +85,7 @@ a {
   td,
   & th {
     border: 1px solid;
-    padding: 3px .277rem;
+    padding: pxtorem(3px) pxtorem(5px);
   }
 
   td:nth-last-child(-n+2) {
@@ -86,10 +98,11 @@ a {
 }
 
 .stonebrook-map__image {
-  width: 250px;
+  width: pxtorem(250px);
 }
 
 @media only screen and (min-width: 600px) {
+  // scss-lint:disable PropertyUnits
   .stonebrook-map {
     text-align: left;
   }
@@ -99,21 +112,15 @@ a {
   }
 }
 
-@media only screen and (min-width: 740px) {
+@media only screen and (min-width: map-get($breakpoints, 'medium')) {
+
   :root {
-    font-size: 16px;
-  }
-
-  body {
-    padding-bottom: 9.72rem;
-  }
-
-  .site {
-    flex-direction: row;
+    @include sasstocssvar('body-bottom-padding', $footer-height);
+    --site-flex-direction: row;
+    --site-content-padding-left: 2.22rem;
   }
 
   .site-content {
     flex: 0 0 calc(100% * 4/5);
-    padding-left: 2.22rem;
   }
 }

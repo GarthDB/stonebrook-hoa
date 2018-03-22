@@ -1,0 +1,18 @@
+@function pxtorem($px, $base: $base-font-size) {
+  @return( $px / $base ) * 1rem;
+}
+
+@function rootfontsize($size, $rootsize: 16px) {
+  @return( $size / $rootsize ) * 100%;
+}
+
+@function map-nested-get($map, $keys...) {
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+  @return $map;
+}
+
+@function color($name, $colors: $color-map) {
+  @return map-get($color-map, $name);
+}

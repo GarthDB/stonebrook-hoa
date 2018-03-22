@@ -33,5 +33,6 @@ exclude:
   - .gitignore
   - Rakefile
   - README.md
+  - node_modules
 sass:
   style: expanded
