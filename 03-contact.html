@@ -18,16 +18,17 @@ scripts:
       <legend class="uk-legend">Date of violation observation</legend>
       <div class="uk-margin"> <input id="input-date" type="date" name="date" class="uk-input uk-form-width-large"> </div>
     </fieldset>
-    <div class="uk-margin"> <textarea id="input-content" name="content" class="uk-textarea uk-form-width-large" rows="5" placeholder="Message"></textarea> </div> <button class="uk-button uk-button-primary" uk-toggle="target: #my-id">Send Message</button>
-    <div id="my-id" uk-modal>
-      <div class="uk-modal-dialog uk-modal-body">
-        <h2 class="uk-modal-title">Sending message... one sec.</h2>
-        <p class="uk-text-center"> <svg class="indefinite-spinner" height="64" width="64">
-            <circle id="bgcircle" class="bgcircle" cx="32" cy="32" r="30"/>
-            <circle id="spinner" class="spinner" r="5"/>
-          </svg> </p>
-        <p class="uk-text-right"> <button class="uk-button uk-modal-close uk-button-danger" type="button">Cancel</button> </p>
-      </div>
-    </div>
+    <div class="uk-margin"> <textarea id="input-content" name="content" class="uk-textarea uk-form-width-large" rows="5" placeholder="Message"></textarea> </div>
+    <input type="submit" value="Send Message" class="uk-button uk-button-primary"/>
   </fieldset>
 </form>
+<div id="form-modal" uk-modal>
+  <div class="uk-modal-dialog uk-modal-body">
+    <h2 class="uk-modal-title">Sending message... one sec.</h2>
+    <p class="uk-text-center"> <svg class="indefinite-spinner" height="64" width="64">
+        <circle id="bgcircle" class="bgcircle" cx="32" cy="32" r="30"/>
+        <circle id="spinner" class="spinner" r="5"/>
+      </svg> </p>
+    <p class="uk-text-right"> <button class="uk-button uk-modal-close uk-button-danger" type="button">Cancel</button> </p>
+  </div>
+</div>
