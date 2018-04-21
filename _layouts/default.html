@@ -3,11 +3,11 @@
 <body>
   {% include header.html %}
   {% include nav.html %}
-  <div class="site">
-    {% include sidebar.html %}
-    <main id="main-content" class="site-content">
+  <div class="uk-flex-center uk-padding uk-grid-divider" uk-grid>
+    <main id="main-content" class="site-content uk-width-3-4@m uk-width-1-1@s">
       {{content}}
     </main>
+    {% include sidebar.html %}
   </div>
   {% include footer.html %}
 </body>
