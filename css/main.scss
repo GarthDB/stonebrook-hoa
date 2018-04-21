@@ -1,10 +1,42 @@
 ---
 ---
+
 @import 'helpers/color_functions';
 @import 'helpers/functions';
 @import 'helpers/mixins';
 @import 'helpers/placeholders';
 @import 'helpers/variables';
+
+// 1. Your custom variables and variable overwrites.
+
+$global-font-family: map-get($font-families, 'sans-serif');
+$global-font-family-font-size: 1rem;
+$base-heading-font-family: map-get($font-families, 'serif');
+$base-body-color: color('body');
+$global-border: #c9d5df;
+
+// 2. Import default variables and available mixins.
+@import "uikit/variables-theme.scss";
+@import "uikit/mixins-theme.scss";
+
+// 3. Your custom mixin overwrites.
+@mixin hook-accordion-title() {
+  font-family: $base-heading-font-family;
+  font-weight: bold;
+}
+@mixin hook-form-single-line() {
+  border-radius: 2px;
+}
+@mixin hook-form-multi-line() {
+  border-radius: 2px;
+}
+@mixin hook-button() {
+  border-radius: 2px;
+}
+
+// 4. Import UIkit.
+@import "uikit/uikit-theme.scss";
+
 @import 'base';
 @import 'header';
 @import 'nav';

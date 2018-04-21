@@ -1,8 +1,4 @@
-$sidebar-order: 1;
-
 .content-sidebar {
-  flex: 0 0 auto;
-  order: $sidebar-order;
   box-sizing: border-box;
 
   ul {
@@ -13,14 +9,5 @@ $sidebar-order: 1;
     li {
       margin-bottom: 1.11rem;
     }
-  }
-}
-
-@media only screen and (min-width: map-get($breakpoints, 'medium')) {
-  $sidebar-order: 0;
-
-  .content-sidebar {
-    flex: 0 0 calc(100% * 1/5);
-    order: $sidebar-order;
   }
 }

@@ -8,16 +8,6 @@
   box-sizing: border-box;
 }
 
-.footer-address {
-  flex: 0 0 calc(100% * 4/5);
-  padding-left: 0;
-}
-
-.footer-phone {
-  flex: 0 0 calc(100% * 1/5);
-  vertical-align: top;
-}
-
 @media only screen and (min-width: map-get($breakpoints, 'medium')) {
   // scss-lint:disable PropertyUnits
   .site-footer {

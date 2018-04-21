@@ -29,7 +29,7 @@ end
 
 desc "watch and build files"
 task :watch do
-  sh "bundle exec jekyll build --watch --config _config_dev.yml"
+  sh "bundle exec jekyll build --watch --incremental --config _config_dev.yml"
 end
 
 desc "serve and reload website"
