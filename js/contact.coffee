@@ -1,11 +1,9 @@
 ---
 ---
 document.addEventListener 'DOMContentLoaded', ->
-  # console.log(UIkit)
-  # UIkit.notification('MyMessage', 'danger');
+
   contactForm = document.getElementById 'contact-form'
-  inputs = contactForm.querySelectorAll '.uk-input, .uk-textarea, .uk-checkbox'
-  cancel = document.getElementById 'contact-form__cancel'
+  inputs = contactForm.querySelectorAll '.uk-input, .uk-textarea, .uk-checkbox, [type="submit"]'
 
   toggleInputs = (disabled = true) ->
     inputs.forEach (input) ->
@@ -14,15 +12,11 @@ document.addEventListener 'DOMContentLoaded', ->
 
   submitListener = (e) ->
     e.preventDefault()
-    toggleInputs()
-    modal = UIkit.modal('#form-modal')
-    UIkit.util.on('#form-modal', 'hide', cancelListener)
-    modal.show()
+    UIkit.modal('#form-modal').show()
     return false
 
-  cancelListener = (e) ->
-    e.preventDefault()
-    toggleInputs(false)
+  UIkit.util.on('#form-modal', 'show', (e)-> toggleInputs())
+  UIkit.util.on('#form-modal', 'hide', (e)-> toggleInputs(false))
 
   contactForm.addEventListener 'submit', submitListener, false
 
