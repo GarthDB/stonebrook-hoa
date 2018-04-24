@@ -15,7 +15,7 @@ permalink: /comparison/
             </div>
           </a>
           <figcaption class="author__desc" id="author__desc">
-            <h3 class="author__desc__title">About The Author</h3>
+            <h2 class="author__desc__title">About The Author</h3>
             <p>Garth is a Front End Developer on <a href="http://topcoat.io">Topcoat</a> at <a href="http://adobe.com">Adobe</a>.<br><a href="http://garthdb.com" class="show-more-link">More about <span>Garth</span>&hellip;</a></p>
           </figcaption>
         </figure>
@@ -73,9 +73,74 @@ permalink: /comparison/
           <img src="https://d33wubrfki0l68.cloudfront.net/07bab6a876338626943c46d654f45aabe7e0e807/47054/images/drop-caps/w.svg" alt="">
           <img src="https://d33wubrfki0l68.cloudfront.net/7a5300157f0903533585a464a32d8d4acbe6ecba/9a85d/images/drop-caps/character-9.svg" alt="">
         </div>
-        <p>When looking to start a new project or update an existing one, you might consider a web user interface framework like UIKit. In this article we'll look at some of the powerful features and potential hazards of using a framework over custom JavaScript and CSS.</p>
-        <h3 id="getting-started">Getting Started</h3>
-        <p>The best place to start is at the beginning.</p>
+        <p>When looking to start a new project or update an existing one, you might consider a web user interface framework like UIKit. In this article, we'll look at some of the powerful features and potential hazards of using a framework over custom JavaScript and CSS.</p>
+        <p>Although I specifically refer to <a href="https://getuikit.com/">UIKit</a> these points are general enough that they apply to most UI frameworks including Bootstrap and Foundation.</p>
+        <h3 id="getting-started">Getting Started<a href="#getting-started" class="heading-hash"><img src="/images/link.svg" alt="Link"></a></h3>
+        <p>The best place to start is at the beginning</p>
+        <h4>UIKit</h4>
+        <p><strong>Pros:</strong> Working with a UI Framework provides a starting process with documentation for getting started, it makes the decision making and configuration portion of starting a new project easy.</p>
+        <p><strong>Cons:</strong> A few more steps before starting to write code (downloading, finding a build process etc)</p>
+        <h4>Custom Code</h4>
+        <p><strong>Pros:</strong> Vanilla HTML/CSS/JS are simple to get straight to writing code.</p>
+        <p><strong>Cons:</strong> Adding preprocessors and transpiling (es6, coffeescript, etc) can drown a developer in choices making it hard to know the best place to start.</p>
+        <div><strong>Winner?</strong> assuming you already have a proficiency in Custom HTML/CSS/JS it's probably easier to start with custom code if you haven't used a UI framework before.</div>
+
+        <h3 id="productivity">Productivity<a href="#productivity" class="heading-hash"><img src="/images/link.svg" alt="Link"></a></h3>
+        <p>Writing code efficiently to create a product.</p>
+        <h4>UIKit</h4>
+        <p><strong>Pros:</strong> Providing an extensive set of components makes it easy to stay productive without having to wait for design to prototype functionality and do user testing.</p>
+        <p><strong>Cons:</strong> There are some coding practices that are unique to each UI Framework, so it does take some time to research how to use components in more complex interactions.</p>
+        <h4>Custom Code</h4>
+        <p><strong>Pros:</strong> HTML/CSS/JS are the native languages of the web; any time spent practicing these skills will always be transferable to any other web project.</p>
+        <p><strong>Cons:</strong> Since no components are really provided outside of standard HTML5 elements it takes quite a lot of time to build everything from scratch.</p>
+        <div><strong>Winner?</strong> assuming you are building an application or product that needs the components provided by a UI framework, you probably find you are most productive with UIKit.</div>
+
+        <div class="c-garfield-the-cat">
+          <h3 id="maintenance">Maintenance<a href="#maintenance" class="heading-hash"><img src="/images/link.svg" alt="Link"></a></h3>
+          <p>Maintaining, updating, and adding to an existing code base.</p>
+          <h4>UIKit</h4>
+          <p><strong>Pros:</strong> Using a UI framework like UIKit gives the developer a standardized process for adding and editing components in an existing project.</p>
+          <p><strong>Cons:</strong> Updating to new versions can bring breaking changes that require time and effort to research and address.</p>
+          <h4>Custom Code</h4>
+          <p><strong>Pros:</strong> Without the UI framework dependencies you never have to worry about breaking updates. Also, it can sometimes be easier to create custom components in custom code than trying to build components into an existing framework.</p>
+          <p><strong>Cons:</strong> Without a standard organization it can be tough to sometimes to return to an old project after not having worked on it for a time.</p>
+          <div><strong>Winner?</strong> custom code gives you a lot more flexibility to change to new architectures and technologies, but if you're mostly doing content updates it would be easiest to update a UIKit project.</div>
+
+          <h3 id="collaboration">Collaboration<a href="#collaboration" class="heading-hash"><img src="/images/link.svg" alt="Link"></a></h3>
+          <p>Working with other developers on the same code base.</p>
+          <h4>UIKit</h4>
+          <p><strong>Pros:</strong> A standard organization and best practice recommendations that come with a UI framework can make collaborating on a project a bit easier since less code design decisions need to be discussed. Also, it can be easier for a new developer to get up to speed on an existing project if it leverages the practices recommended by the UI framework's documentation.</p>
+          <p><strong>Cons:</strong> It can be tough to sometimes agree on a UI framework that everyone likes to use.</p>
+          <h4>Custom Code</h4>
+          <p><strong>Pros:</strong> It can be easier to pivot in architecture decisions to more specifically address the needs of the product as it matures.</p>
+          <p><strong>Cons:</strong> Without the standardization, the project can turn into a hot mess that is hard to read and update for new developers on the project.</p>
+          <div><strong>Winner?</strong> the best practices and documentation really make UIKit a clear winner for collaboration.</div>
+
+          <h3 id="performance">Performance<a href="#performance" class="heading-hash"><img src="/images/link.svg" alt="Link"></a></h3>
+          <p>Keeping a website or application lean and performant.</p>
+          <h4>UIKit</h4>
+          <p><strong>Pros:</strong> UI frameworks like UI Kit tend to optimize components over time especially with outside contributions.</p>
+          <p><strong>Cons:</strong> Frameworks tend to have components and functionality that isn't needed adding some amount of bloat to the assets that are downloaded by the user.</p>
+          <h4>Custom Code</h4>
+          <p><strong>Pros:</strong> The developer can customize the UI to the exact needs of the product and keep it lean.</p>
+          <p><strong>Cons:</strong> It can take a lot of time and energy to optimize custom code.</p>
+          <div><strong>Winner?</strong> although you could spend time making a custom build of UIKit, your best chance for highly optimized code is to build it custom for your project.</div>
+
+
+          <h3 id="accessibility">Accessibility<a href="#accessibility" class="heading-hash"><img src="/images/link.svg" alt="Link"></a></h3>
+          <p>Ensuring a product can be used by a large audience with diverse accessibility needs.</p>
+          <h4>UIKit</h4>
+          <p><strong>Pros:</strong> Overtime, open source UI frameworks like UIKit tend to improve accessibility as developers file issues and submit pull requests. UIKit has a <a href="https://github.com/uikit/uikit/search?q=accessibility&type=Issues">number of issues</a> it has closed that has improved it's adherence to standards like Aria from W3C.</p>
+          <p><strong>Cons:</strong> Not all projects are open to outside contributions and not all projects see the need to be strict in supporting accessibility standards. For example, as of writing this, <a href="https://github.com/uikit/uikit/issues/1915">this issue</a> with the Dropdown has not been fully resolved.</p>
+          <h4>Custom Code</h4>
+          <p><strong>Pros:</strong> No need to wait for issues to be fixed and updates released.</p>
+          <p><strong>Cons:</strong> Working alone or in a small team on a custom code base can make it hard to stay abreast of accessibility needs and strategies.</p>
+          <div><strong>Winner?</strong> UIKit has done a lot of the legwork for you and makes it easy to get great accessibility from the start.</div>
+
+          <h3 id="conclusion">Conclusion<a href="#conclusion" class="heading-hash"><img src="/images/link.svg" alt="Link"></a></h3>
+          <p>Ultimately it comes down to the developer's preferences and the needs of the project, but for the vast majority of simple projects, a UI framework like UIKit provides so much out of the box that it's worth trying even if it's just for early prototypes.</p>
+          <p>If you are working on a project with a lot of resources or are planning to continually optimize and tweak it over a long period of time, you might find a custom code base make it possible to really dial in the performance and user experience that best suit your needs.</p>
+        </div>
       </div>
     </div>
     <div class="row">
